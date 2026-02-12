@@ -1,5 +1,5 @@
 # Mini Translator App 🌍
-
+ 
 A Python-based desktop translator built with Tkinter. 
 
 ### Features:
