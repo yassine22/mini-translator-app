@@ -1,0 +1,4 @@
+deep-translator
+arabic-reshaper
+python-bidi
+pyperclip
