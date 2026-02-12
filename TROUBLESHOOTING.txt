@@ -1,0 +1,34 @@
+MINI TRANSLATOR APP - TROUBLESHOOTING GUIDE
+===========================================
+
+If the app fails to run or behaves unexpectedly, check the solutions below:
+
+1. ERROR: "ModuleNotFoundError: No module named 'tkinter'"
+   -------------------------------------------------------
+   Fix: Tkinter is a system-level package on Linux.
+   Run: sudo apt update && sudo apt install python3-tk
+
+2. ERROR: "externally-managed-environment" (when installing pip libraries)
+   -----------------------------------------------------------------------
+   Fix: Modern Linux requires a Virtual Environment.
+   Run: 
+   python3 -m venv venv
+   source venv/bin/activate
+   pip install deep-translator arabic-reshaper python-bidi pyperclip
+
+3. ERROR: Arabic text looks disconnected or backwards
+   --------------------------------------------------
+   Fix: Ensure you have installed 'arabic-reshaper' and 'python-bidi'.
+   If you are copying the text out of the app, it may appear reversed 
+   in other programs because this app pre-shapes the text specifically 
+   for the Tkinter display engine.
+
+4. ERROR: "No internet connection" or "Translation failed"
+   -------------------------------------------------------
+   Fix: This app uses the Google Translate API (via deep-translator). 
+   You must have an active internet connection for it to work.
+
+5. ERROR: Japanese/Chinese characters show up as boxes (□□□)
+   ---------------------------------------------------------
+   Fix: Your Linux system is missing the required fonts.
+   Run: sudo apt install fonts-noto-cjk
