@@ -1,0 +1,1 @@
+you can also create a launcher that run 'python3 translator.py' to access directly to the program
